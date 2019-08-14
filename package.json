@@ -1,0 +1,28 @@
+{
+  "name": "monkey-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:DisasterMan78/monkey-server.git",
+  "author": "<dmbenson1978@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.8.1",
+    "bcryptjs": "^2.4.3",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "graphql": "^14.4.2",
+    "sequelize": "^5.13.0",
+    "sequelize-cli": "^5.5.0",
+    "sqlite3": "^4.0.9"
+  },
+  "scripts": {
+    "sequelize": "./node_modules/.bin/sequelize",
+    "migrate": "./node_modules/.bin/sequelize db:migrate:undo:all && ./node_modules/.bin/sequelize db:migrate",
+    "monkey-server": "node src/index.js"
+  },
+  "devDependencies": {}
+}
