@@ -1,6 +1,8 @@
-const { gql } = require('apollo-server');
+// const { gql } = require('apollo-server');
 
-const typeDefs = `type User {
+const typeDefs = `
+
+  type User {
     id: Int!
     name: String!
     email: String!
@@ -21,11 +23,19 @@ const typeDefs = `type User {
 
   type Mutation {
     createUser(name: String!, email: String!, password: String!): User!
+
     createCollection(
       userId: Int!
       minifigId: Int!
       count: Int!
     ): Collection!
+
+    authentication(email: String!, password: String!): AuthenticationResponse!
+  }
+
+  type AuthenticationResponse {
+    token: String!
+    user: User!
   }
 `;
 
