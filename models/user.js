@@ -1,29 +1,29 @@
-'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     email: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     password: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     publicCollection: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: false,
     },
     publicProfile: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: false,
     },
   }, {});
-  User.associate = function(models) {
-    User.hasMany(models.Collection)
+  User.associate = (models) => {
+    User.hasMany(models.Collection);
   };
   return User;
 };
